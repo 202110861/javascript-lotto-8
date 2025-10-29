@@ -14,7 +14,9 @@ class Lotto {
 
   // TODO: 추가 기능 구현
   getNumbers() {
-    const sortNumberList = this.#numbers.sort();
+    const sortNumberList = this.#numbers.sort((a, b) => {
+      return a - b;
+    });
     return sortNumberList;
   }
 }
