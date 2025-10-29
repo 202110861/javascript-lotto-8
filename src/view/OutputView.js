@@ -1,4 +1,5 @@
 import { Console } from "@woowacourse/mission-utils";
+import { OUTPUT_MESSAGE } from "../Constants";
 
 export class OutputView {
   printError(errorMessage) {
@@ -6,6 +7,10 @@ export class OutputView {
   }
 
   printPurchaseCount(count) {
-    Console.print(`${count}`);
+    Console.print(`${count}${OUTPUT_MESSAGE.PURCHASE_COUNT}`);
+  }
+
+  printResultTitle() {
+    Console.print(`${OUTPUT_MESSAGE.RESULT_TITLE}`);
   }
 }
