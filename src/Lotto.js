@@ -13,6 +13,10 @@ class Lotto {
   }
 
   // TODO: 추가 기능 구현
+  getNumbers() {
+    const sortNumberList = this.#numbers.sort();
+    return sortNumberList;
+  }
 }
 
 export default Lotto;
