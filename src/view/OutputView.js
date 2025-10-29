@@ -13,4 +13,8 @@ export class OutputView {
   printResultTitle() {
     Console.print(`${OUTPUT_MESSAGE.RESULT_TITLE}`);
   }
+
+  printNumberList(numberList) {
+    Console.print(numberList);
+  }
 }
