@@ -7,4 +7,11 @@ export const INPUT_MESSAGE = {
 export const OUTPUT_MESSAGE = {
   PURCHASE_COUNT: "개를 구매했습니다.",
   RESULT_TITLE: "당첨 통계\n---",
+  RESULT_CONTENT: {
+    THREE: { 3: "5,000원" },
+    FORE: { 4: "50,000원" },
+    FIVE: { 5: "1,500,000원" },
+    FIVE_BONUS: { 5: "30,000,000원" },
+    SIX: { 6: "2,000,000,000원" },
+  },
 };
