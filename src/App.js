@@ -1,6 +1,7 @@
 import { InputView } from "./view/InputView.js";
 import { CalculatePurchaseCount } from "./CalculatePurchaseCount.js";
 import { OutputView } from "./view/OutputView.js";
+import { Repeat } from "./Repeat.js";
 class App {
   async run() {
     const inputView = new InputView();
@@ -9,6 +10,8 @@ class App {
     const purchaseAmount = inputView.inputPurchase();
     const count = CalculatePurchaseCount(await purchaseAmount);
     outputView.printPurchaseCount(count);
+
+    Repeat(count);
   }
 }
 
