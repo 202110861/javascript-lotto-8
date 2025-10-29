@@ -17,4 +17,8 @@ export class OutputView {
   printNumberList(numberList) {
     Console.print(numberList);
   }
+
+  printResultContent(number, price, count) {
+    Console.print(`${number}개 일치 (${price}) - ${count}개`);
+  }
 }
