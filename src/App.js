@@ -12,6 +12,11 @@ class App {
     outputView.printPurchaseCount(count);
 
     Repeat(count);
+
+    const winningNumber = inputView.inputWinningNumber();
+    const bonusNumber = inputView.inputBonusNumber();
+
+    outputView.printResultTitle();
   }
 }
 
