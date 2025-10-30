@@ -16,6 +16,7 @@ class App {
 
     const winningNumber = await inputView.inputWinningNumber();
     const bonusNumber = await inputView.inputBonusNumber();
+    validateBonusNumber(bonusNumber, winningNumber);
 
     outputView.printResultTitle();
 
