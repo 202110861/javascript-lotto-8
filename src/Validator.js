@@ -6,14 +6,11 @@ const outputView = new OutputView();
 export const validatePurchaseAmount = (amount) => {
   if (isNaN(amount)) {
     outputView.throwError(ERROR_MESSAGES.PURCHASE_AMOUNT.NOT_NUMBER);
-  }
-  if (amount % 1000 !== 0) {
+  } else if (amount % 1000 !== 0) {
     outputView.throwError(ERROR_MESSAGES.PURCHASE_AMOUNT.NOT_DIVISIBLE_BY_UNIT);
-  }
-  if (amount <= 0) {
+  } else if (amount <= 0) {
     outputView.throwError(ERROR_MESSAGES.PURCHASE_AMOUNT.NOT_POSITIVE);
-  }
-  if (!Number.isInteger(amount)) {
+  } else if (!Number.isInteger(amount)) {
     outputView.throwError(ERROR_MESSAGES.PURCHASE_AMOUNT.NOT_INTEGER);
   }
 };
@@ -26,11 +23,9 @@ export const validateWinningNumbers = (winningNumbers) => {
     winningNumbersArray.forEach((number) => {
       if (isNaN(number)) {
         outputView.throwError(ERROR_MESSAGES.WINNING_NUMBERS.NOT_NUMBER);
-      }
-      if (number < 1 || number > 45) {
+      } else if (number < 1 || number > 45) {
         outputView.throwError(ERROR_MESSAGES.WINNING_NUMBERS.OUT_OF_RANGE);
-      }
-      if (!Number.isInteger(number)) {
+      } else if (!Number.isInteger(number)) {
         outputView.throwError(ERROR_MESSAGES.WINNING_NUMBERS.NOT_INTEGER);
       }
     });
@@ -42,14 +37,11 @@ export const validateBonusNumber = (bonusNumber, winningNumbers) => {
 
   if (isNaN(bonusNumber)) {
     outputView.throwError(ERROR_MESSAGES.BONUS_NUMBER.NOT_NUMBER);
-  }
-  if (bonusNumber < 1 || bonusNumber > 45) {
+  } else if (bonusNumber < 1 || bonusNumber > 45) {
     outputView.throwError(ERROR_MESSAGES.BONUS_NUMBER.OUT_OF_RANGE);
-  }
-  if (!Number.isInteger(bonusNumber)) {
+  } else if (!Number.isInteger(bonusNumber)) {
     outputView.throwError(ERROR_MESSAGES.BONUS_NUMBER.NOT_INTEGER);
-  }
-  if (winningNumbersArray.includes(bonusNumber)) {
+  } else if (winningNumbersArray.includes(bonusNumber)) {
     outputView.throwError(ERROR_MESSAGES.BONUS_NUMBER.DUPLICATE);
   }
 };
