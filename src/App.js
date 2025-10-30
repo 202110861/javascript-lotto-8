@@ -17,9 +17,14 @@ class App {
     const winningNumber = await inputView.inputWinningNumber();
     const bonusNumber = await inputView.inputBonusNumber();
 
-    await outputView.printResultTitle();
+    outputView.printResultTitle();
 
-    CalculateResultCount(lottoList, winningNumber, bonusNumber);
+    const totalMoney = CalculateResultCount(
+      lottoList,
+      winningNumber,
+      bonusNumber
+    );
+    outputView.printProfitRate(totalMoney, purchaseAmount);
   }
 }
 
