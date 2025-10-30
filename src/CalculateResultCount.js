@@ -1,7 +1,4 @@
-import {
-  MatchingNumberCount,
-  checkBonusNumber,
-} from "./MatchingNumberCount.js";
+import { MatchingNumberCount } from "./MatchingNumberCount.js";
 import { OutputView } from "./view/OutputView.js";
 import { OUTPUT_MESSAGE } from "./Constants.js";
 

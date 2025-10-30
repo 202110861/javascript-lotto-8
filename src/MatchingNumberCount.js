@@ -40,7 +40,7 @@ const parseLottoStringToArray = (lottoString) => {
     .filter((v) => !isNaN(v));
 };
 
-export const checkBonusNumber = (lotto, bonusNumber) => {
+const checkBonusNumber = (lotto, bonusNumber) => {
   const number = Number(bonusNumber);
   const lottoArray = parseLottoStringToArray(lotto);
   const isBonusNumber = lottoArray.includes(number);
