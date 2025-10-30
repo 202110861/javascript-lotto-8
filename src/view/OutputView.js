@@ -5,9 +5,12 @@ export class OutputView {
   throwError(errorMessage) {
     throw new Error(`[ERROR] ${errorMessage}`);
   }
+  printErrorMessage(errorMessage) {
+    Console.print(`[ERROR] ${errorMessage}`);
+  }
 
   printPurchaseCount(count) {
-    Console.print(`\n${count}${OUTPUT_MESSAGE.PURCHASE_COUNT}`);
+    Console.print(`${count}${OUTPUT_MESSAGE.PURCHASE_COUNT}`);
   }
 
   printResultTitle() {
