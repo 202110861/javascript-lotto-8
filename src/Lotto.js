@@ -1,5 +1,6 @@
 import { ERROR_MESSAGES } from "./Constants.js";
 import { OutputView } from "./view/OutputView.js";
+import { isDuplicate } from "./isDuplicate.js";
 
 const outputView = new OutputView();
 
@@ -20,7 +21,7 @@ class Lotto {
 
   // TODO: 추가 기능 구현
   #validateDuplicate(numbers) {
-    if (numbers.some((number) => numbers.includes(number))) {
+    if (isDuplicate(numbers)) {
       outputView.throwError(ERROR_MESSAGES.LOTTO.DUPLICATE);
     }
   }
