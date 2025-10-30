@@ -33,5 +33,6 @@ export const ERROR_MESSAGES = {
     NOT_NUMBER: "보너스 번호는 숫자로 입력해야 합니다.",
     OUT_OF_RANGE: "보너스 번호는 1부터 45 사이의 숫자여야 합니다.",
     NOT_INTEGER: "보너스 번호는 정수로 입력해야 합니다.",
+    DUPLICATE: "보너스 번호는 당첨 번호와 중복되지 않아야 합니다.",
   },
 };
