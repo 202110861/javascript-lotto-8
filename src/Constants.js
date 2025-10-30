@@ -17,6 +17,10 @@ export const OUTPUT_MESSAGE = {
 };
 
 export const ERROR_MESSAGES = {
+  LOTTO: {
+    INVALID_LENGTH: "로또 번호는 6개여야 합니다.",
+    DUPLICATE: "로또 번호는 중복되지 않아야 합니다.",
+  },
   PURCHASE_AMOUNT: {
     NOT_NUMBER: "구입 금액은 숫자로 입력해야 합니다.",
     NOT_DIVISIBLE_BY_UNIT: "구입 금액은 1,000원 단위로 입력해야 합니다.",
