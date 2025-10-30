@@ -25,4 +25,8 @@ export class OutputView {
       Console.print(`${number}개 일치 (${price}) - ${count}개`);
     }
   }
+  printProfitRate(totalMoney, purchaseAmount) {
+    const profitRate = ((totalMoney / Number(purchaseAmount)) * 100).toFixed(1);
+    Console.print(`총 수익률은 ${profitRate}%입니다.`);
+  }
 }
