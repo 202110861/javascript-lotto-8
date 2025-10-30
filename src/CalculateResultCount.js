@@ -7,6 +7,7 @@ import { OUTPUT_MESSAGE } from "./Constants.js";
 
 export const CalculateResultCount = (lottoList, winningNumber, bonusNumber) => {
   const outputView = new OutputView();
+  let totalMoney = 0;
 
   for (let i = 3; i < 7; i++) {
     let count;
@@ -25,6 +26,12 @@ export const CalculateResultCount = (lottoList, winningNumber, bonusNumber) => {
       count,
       false
     );
+
+    const numberPrice = Number(
+      OUTPUT_MESSAGE.RESULT_CONTENT[i].replace(/,/g, "").replace(/원/g, "")
+    );
+
+    totalMoney += numberPrice * count;
     if (i === 5) {
       outputView.printResultContent(
         i,
@@ -32,6 +39,13 @@ export const CalculateResultCount = (lottoList, winningNumber, bonusNumber) => {
         bonusCount,
         true
       );
+      const numberPrice = Number(
+        OUTPUT_MESSAGE.RESULT_CONTENT["5_BONUS"]
+          .replace(/,/g, "")
+          .replace(/원/g, "")
+      );
+      totalMoney += numberPrice * bonusCount;
     }
   }
+  return totalMoney;
 };
