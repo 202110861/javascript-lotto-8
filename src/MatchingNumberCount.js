@@ -6,14 +6,14 @@ export const MatchingNumberCount = (
 ) => {
   let count = 0;
   const countNumber = matchingNumber(lotto, winningNumber);
-  if (countNumber === number) {
-    count++;
-  }
-  if (number === 5) {
+
+  if (number === 5 && bonusNumber) {
     const isBonusNumber = checkBonusNumber(lotto, bonusNumber);
     if (isBonusNumber && countNumber === 5) {
       count++;
     }
+  } else if (number === 5) {
+    count++;
   }
   return count;
 };
