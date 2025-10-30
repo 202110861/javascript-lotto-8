@@ -18,7 +18,11 @@ export class OutputView {
     Console.print(numberList);
   }
 
-  printResultContent(number, price, count) {
-    Console.print(`${number}개 일치 (${price}) - ${count}개`);
+  printResultContent(number, price, count, bonus) {
+    if (bonus) {
+      Console.print(`${number}개 일치, 보너스 볼 일치 (${price}) - ${count}개`);
+    } else {
+      Console.print(`${number}개 일치 (${price}) - ${count}개`);
+    }
   }
 }
