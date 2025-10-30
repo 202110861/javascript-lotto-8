@@ -140,3 +140,26 @@
   - 당첨 번호와 중복되는 경우
 
 ## 실수를 통해 얻은 지식
+
+### 1) 중복되는 숫자 검사
+
+- 처음 했던 방식
+
+```jsx
+const isDuplicate = (numbers) => {
+  if (numbers.some((number) => numbers.includes(number))) return true;
+  return false;
+};
+```
+
+- 문제점
+  - 자기 자신도 포함하여 비교하기 때문에 무조건 true 발생
+- 해결방안 : Set 객체 사용
+  - Set() : 중복되지 않는 값들의 집합을 나타내는 객체
+  ```jsx
+  const isDuplicate = (numbers) => {
+    const numberSet = new Set(numbers);
+    if (numberSet.size !== numbers.length) return true;
+    return false;
+  };
+  ```
