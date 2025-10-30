@@ -7,7 +7,7 @@ export class OutputView {
   }
 
   printPurchaseCount(count) {
-    Console.print(`${count}${OUTPUT_MESSAGE.PURCHASE_COUNT}`);
+    Console.print(`\n${count}${OUTPUT_MESSAGE.PURCHASE_COUNT}`);
   }
 
   printResultTitle() {
