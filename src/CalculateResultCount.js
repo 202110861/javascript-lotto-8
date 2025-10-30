@@ -15,6 +15,10 @@ export const CalculateResultCount = (lottoList, winningNumber, bonusNumber) => {
       count = MatchingNumberCount(i, lotto, winningNumber);
       bonusCount = MatchingNumberCount(5, lotto, winningNumber, bonusNumber);
     });
+
+    if (count > 0 && bonusCount > 0) {
+      count--;
+    }
     outputView.printResultContent(
       i,
       OUTPUT_MESSAGE.RESULT_CONTENT[i],
