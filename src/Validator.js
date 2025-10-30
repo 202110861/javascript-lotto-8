@@ -7,33 +7,43 @@ const outputView = new OutputView();
 export const validatePurchaseAmount = (amount) => {
   const numberAmount = Number(amount);
   if (isNaN(numberAmount)) {
-    outputView.throwError(ERROR_MESSAGES.PURCHASE_AMOUNT.NOT_NUMBER);
+    outputView.printErrorMessage(ERROR_MESSAGES.PURCHASE_AMOUNT.NOT_NUMBER);
   } else if (numberAmount % 1000 !== 0) {
-    outputView.throwError(ERROR_MESSAGES.PURCHASE_AMOUNT.NOT_DIVISIBLE_BY_UNIT);
+    outputView.printErrorMessage(
+      ERROR_MESSAGES.PURCHASE_AMOUNT.NOT_DIVISIBLE_BY_UNIT
+    );
   } else if (numberAmount <= 0) {
-    outputView.throwError(ERROR_MESSAGES.PURCHASE_AMOUNT.NOT_POSITIVE);
+    outputView.printErrorMessage(ERROR_MESSAGES.PURCHASE_AMOUNT.NOT_POSITIVE);
   } else if (!Number.isInteger(numberAmount)) {
-    outputView.throwError(ERROR_MESSAGES.PURCHASE_AMOUNT.NOT_INTEGER);
+    outputView.printErrorMessage(ERROR_MESSAGES.PURCHASE_AMOUNT.NOT_INTEGER);
   }
 };
 
 export const validateWinningNumbers = (winningNumbers) => {
   if (!winningNumbers.includes(",")) {
-    outputView.throwError(ERROR_MESSAGES.WINNING_NUMBERS.INVALID_DELIMITER);
+    outputView.printErrorMessage(
+      ERROR_MESSAGES.WINNING_NUMBERS.INVALID_DELIMITER
+    );
   } else {
     const winningNumbersArray = winningNumbers.split(",");
     winningNumbersArray.forEach((n) => {
       const number = Number(n);
       if (isNaN(number)) {
-        outputView.throwError(ERROR_MESSAGES.WINNING_NUMBERS.NOT_NUMBER);
+        outputView.printErrorMessage(ERROR_MESSAGES.WINNING_NUMBERS.NOT_NUMBER);
       } else if (number < 1 || number > 45) {
-        outputView.throwError(ERROR_MESSAGES.WINNING_NUMBERS.OUT_OF_RANGE);
+        outputView.printErrorMessage(
+          ERROR_MESSAGES.WINNING_NUMBERS.OUT_OF_RANGE
+        );
       } else if (!Number.isInteger(number)) {
-        outputView.throwError(ERROR_MESSAGES.WINNING_NUMBERS.NOT_INTEGER);
+        outputView.printErrorMessage(
+          ERROR_MESSAGES.WINNING_NUMBERS.NOT_INTEGER
+        );
       }
     });
     if (isDuplicate(winningNumbersArray)) {
-      outputView.throwError(ERROR_MESSAGES.WINNING_NUMBERS.DUPLICATE_NUMBER);
+      outputView.printErrorMessage(
+        ERROR_MESSAGES.WINNING_NUMBERS.DUPLICATE_NUMBER
+      );
     }
   }
 };
@@ -42,12 +52,12 @@ export const validateBonusNumber = (bonusNumber, winningNumbers) => {
   const winningNumbersArray = winningNumbers.split(",");
   const numberBonus = Number(bonusNumber);
   if (isNaN(numberBonus)) {
-    outputView.throwError(ERROR_MESSAGES.BONUS_NUMBER.NOT_NUMBER);
+    outputView.printErrorMessage(ERROR_MESSAGES.BONUS_NUMBER.NOT_NUMBER);
   } else if (numberBonus < 1 || numberBonus > 45) {
-    outputView.throwError(ERROR_MESSAGES.BONUS_NUMBER.OUT_OF_RANGE);
+    outputView.printErrorMessage(ERROR_MESSAGES.BONUS_NUMBER.OUT_OF_RANGE);
   } else if (!Number.isInteger(numberBonus)) {
-    outputView.throwError(ERROR_MESSAGES.BONUS_NUMBER.NOT_INTEGER);
+    outputView.printErrorMessage(ERROR_MESSAGES.BONUS_NUMBER.NOT_INTEGER);
   } else if (winningNumbersArray.includes(bonusNumber)) {
-    outputView.throwError(ERROR_MESSAGES.BONUS_NUMBER.DUPLICATE);
+    outputView.printErrorMessage(ERROR_MESSAGES.BONUS_NUMBER.DUPLICATE);
   }
 };
