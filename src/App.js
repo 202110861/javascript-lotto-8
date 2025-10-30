@@ -2,6 +2,7 @@ import { InputView } from "./view/InputView.js";
 import { CalculatePurchaseCount } from "./CalculatePurchaseCount.js";
 import { OutputView } from "./view/OutputView.js";
 import { Repeat } from "./Repeat.js";
+import { CalculateResultCount } from "./CalculateResultCount.js";
 class App {
   async run() {
     const inputView = new InputView();
@@ -11,12 +12,12 @@ class App {
     const count = CalculatePurchaseCount(await purchaseAmount);
     outputView.printPurchaseCount(count);
 
-    Repeat(count);
+    const lottoList = Repeat(count);
 
     const winningNumber = inputView.inputWinningNumber();
     const bonusNumber = inputView.inputBonusNumber();
 
-    outputView.printResultTitle();
+    CalculateResultCount(lottoList, winningNumber, bonusNumber);
   }
 }
 
