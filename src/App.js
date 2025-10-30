@@ -3,6 +3,7 @@ import { CalculatePurchaseCount } from "./CalculatePurchaseCount.js";
 import { OutputView } from "./view/OutputView.js";
 import { Repeat } from "./Repeat.js";
 import { CalculateResultCount } from "./CalculateResultCount.js";
+import { validateBonusNumber } from "./Validator.js";
 class App {
   async run() {
     const inputView = new InputView();
