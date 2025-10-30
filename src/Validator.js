@@ -1,5 +1,6 @@
 import { OutputView } from "./view/OutputView.js";
 import { ERROR_MESSAGES } from "./Constants.js";
+import { isDuplicate } from "./isDuplicate.js";
 
 const outputView = new OutputView();
 
@@ -17,7 +18,7 @@ export const validatePurchaseAmount = (amount) => {
 };
 
 export const validateWinningNumbers = (winningNumbers) => {
-  if (winningNumbers.includes(",")) {
+  if (!winningNumbers.includes(",")) {
     outputView.throwError(ERROR_MESSAGES.WINNING_NUMBERS.INVALID_DELIMITER);
   } else {
     const winningNumbersArray = winningNumbers.split(",");
@@ -31,7 +32,7 @@ export const validateWinningNumbers = (winningNumbers) => {
         outputView.throwError(ERROR_MESSAGES.WINNING_NUMBERS.NOT_INTEGER);
       }
     });
-    if (winningNumbersArray.some((n) => winningNumbersArray.includes(n))) {
+    if (isDuplicate(winningNumbersArray)) {
       outputView.throwError(ERROR_MESSAGES.WINNING_NUMBERS.DUPLICATE_NUMBER);
     }
   }
