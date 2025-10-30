@@ -2,14 +2,13 @@ import { MatchingNumberCount } from "./MatchingNumberCount.js";
 import { OutputView } from "./view/OutputView.js";
 import { OUTPUT_MESSAGE } from "./Constants.js";
 
-// 외부 인터페이스 유지: 계산 + 출력 + 총액 반환
 export const CalculateResultCount = (lottoList, winningNumber, bonusNumber) => {
   const counts = aggregateMatchCounts(lottoList, winningNumber, bonusNumber);
   printResultLines(counts);
   return calculateTotalWinnings(counts);
 };
 
-// 순수 계산: 등수별 개수 집계 (3,4,5,5_BONUS,6)
+// 등수별 개수 집계 (3,4,5,5_BONUS,6)
 const aggregateMatchCounts = (lottoList, winningNumber, bonusNumber) => {
   const counts = { 3: 0, 4: 0, 5: 0, "5_BONUS": 0, 6: 0 };
 
@@ -31,7 +30,7 @@ const aggregateMatchCounts = (lottoList, winningNumber, bonusNumber) => {
   return counts;
 };
 
-// 순수 계산: 총 당첨금 계산
+// 총 당첨금 계산
 const calculateTotalWinnings = (counts) => {
   let total = 0;
   const priceOf = (number) =>
@@ -47,7 +46,7 @@ const calculateTotalWinnings = (counts) => {
   return total;
 };
 
-// 출력 전용: 등수별 결과 출력
+// 등수별 결과 출력
 const printResultLines = (counts) => {
   const outputView = new OutputView();
   [3, 4, 5, 6].forEach((number) => {
