@@ -32,6 +32,7 @@ export const ERROR_MESSAGES = {
     INVALID_DELIMITER: "당첨 번호는 쉼표(,)로 구분해야 합니다.",
     OUT_OF_RANGE: "당첨 번호는 1부터 45 사이의 숫자여야 합니다.",
     NOT_INTEGER: "당첨 번호는 정수로 입력해야 합니다.",
+    DUPLICATE_NUMBER: "당첨 번호는 중복되지 않아야 합니다.",
   },
   BONUS_NUMBER: {
     NOT_NUMBER: "보너스 번호는 숫자로 입력해야 합니다.",
