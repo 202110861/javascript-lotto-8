@@ -2,8 +2,8 @@ import { Console } from "@woowacourse/mission-utils";
 import { OUTPUT_MESSAGE } from "../Constants.js";
 
 export class OutputView {
-  printError(errorMessage) {
-    Console.print(`[ERROR] ${errorMessage}`);
+  throwError(errorMessage) {
+    throw new Error(`[ERROR] ${errorMessage}`);
   }
 
   printPurchaseCount(count) {
