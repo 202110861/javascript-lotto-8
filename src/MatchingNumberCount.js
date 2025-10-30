@@ -12,7 +12,7 @@ export const MatchingNumberCount = (
     if (isBonusNumber && countNumber === 5) {
       count++;
     }
-  } else if (number === 5) {
+  } else if (number === countNumber) {
     count++;
   }
   return count;
