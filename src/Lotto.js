@@ -30,7 +30,8 @@ class Lotto {
     const sortNumberList = this.#numbers.sort((a, b) => {
       return a - b;
     });
-    return sortNumberList;
+    const stringNumberList = `[${sortNumberList.join(", ")}]`;
+    return stringNumberList;
   }
 }
 
