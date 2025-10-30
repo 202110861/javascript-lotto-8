@@ -8,14 +8,16 @@ class App {
     const inputView = new InputView();
     const outputView = new OutputView();
 
-    const purchaseAmount = inputView.inputPurchase();
-    const count = CalculatePurchaseCount(await purchaseAmount);
+    const purchaseAmount = await inputView.inputPurchase();
+    const count = CalculatePurchaseCount(purchaseAmount);
     outputView.printPurchaseCount(count);
 
     const lottoList = Repeat(count);
 
-    const winningNumber = inputView.inputWinningNumber();
-    const bonusNumber = inputView.inputBonusNumber();
+    const winningNumber = await inputView.inputWinningNumber();
+    const bonusNumber = await inputView.inputBonusNumber();
+
+    await outputView.printResultTitle();
 
     CalculateResultCount(lottoList, winningNumber, bonusNumber);
   }
