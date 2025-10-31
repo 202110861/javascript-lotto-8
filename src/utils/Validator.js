@@ -1,5 +1,5 @@
-import { OutputView } from "./view/OutputView.js";
-import { ERROR_MESSAGES } from "./Constants.js";
+import { OutputView } from "../view/OutputView.js";
+import { ERROR_MESSAGES } from "../constant/Constants.js";
 import { isDuplicate } from "./isDuplicate.js";
 
 const outputView = new OutputView();
