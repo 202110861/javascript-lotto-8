@@ -1,5 +1,5 @@
 import { MissionUtils } from "@woowacourse/mission-utils";
-import { CalculateResultCount } from "../src/CalculateResultCount.js";
+import { LottoResultController } from "../src/controller/LottoResultController.js";
 
 const getLogSpy = () => {
   const logSpy = jest.spyOn(MissionUtils.Console, "print");
@@ -22,7 +22,7 @@ describe("CalculateResultCount 테스트", () => {
     const winningNumber = "1,2,3,4,5,6";
     const bonusNumber = "7";
     const logSpy = getLogSpy();
-    const result = CalculateResultCount(lottoList, winningNumber, bonusNumber);
+    const result = LottoResultController(lottoList, winningNumber, bonusNumber);
 
     const logs = [
       "3개 일치 (5,000원) - 1개",

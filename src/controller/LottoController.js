@@ -1,8 +1,8 @@
 import { InputView } from "../view/InputView.js";
 import { CalculatePurchaseCount } from "../utils/CalculatePurchaseCount.js";
 import { OutputView } from "../view/OutputView.js";
-import { Repeat } from "../Repeat.js";
-import { CalculateResultCount } from "../CalculateResultCount.js";
+import { Repeat } from "./Repeat.js";
+import { LottoResultController } from "../controller/LottoResultController.js";
 import { validateBonusNumber } from "../utils/Validator.js";
 
 export class LottoController {
@@ -22,7 +22,7 @@ export class LottoController {
 
     outputView.printResultTitle();
 
-    const totalMoney = CalculateResultCount(
+    const totalMoney = LottoResultController(
       lottoList,
       winningNumber,
       bonusNumber

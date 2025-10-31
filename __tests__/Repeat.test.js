@@ -1,5 +1,5 @@
 import { MissionUtils } from "@woowacourse/mission-utils";
-import { Repeat } from "../src/Repeat.js";
+import { Repeat } from "../src/controller/Repeat.js";
 
 const mockRandoms = (numbers) => {
   MissionUtils.Random.pickUniqueNumbersInRange = jest.fn();
