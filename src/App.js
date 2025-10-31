@@ -1,4 +1,4 @@
-import { LottoController } from "./controller/LottoController";
+import { LottoController } from "../src/controller/LottoController.js";
 
 class App {
   async run() {

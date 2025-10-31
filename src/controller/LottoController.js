@@ -1,7 +1,7 @@
 import { InputView } from "../view/InputView.js";
 import { CalculatePurchaseCount } from "../utils/CalculatePurchaseCount.js";
 import { OutputView } from "../view/OutputView.js";
-import { Repeat } from "./Repeat.js";
+import { Repeat } from "../controller/Repeat.js";
 import { LottoResultController } from "../controller/LottoResultController.js";
 import { validateBonusNumber } from "../utils/Validator.js";
 
