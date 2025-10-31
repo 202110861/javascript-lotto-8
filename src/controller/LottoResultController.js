@@ -1,8 +1,12 @@
-import { MatchingNumberCount } from "./utils/MatchingNumberCount.js";
-import { OutputView } from "./view/OutputView.js";
-import { OUTPUT_MESSAGE } from "./constant/Constants.js";
+import { MatchingNumberCount } from "../utils/MatchingNumberCount.js";
+import { OutputView } from "../view/OutputView.js";
+import { OUTPUT_MESSAGE } from "../constant/Constants.js";
 
-export const CalculateResultCount = (lottoList, winningNumber, bonusNumber) => {
+export const LottoResultController = (
+  lottoList,
+  winningNumber,
+  bonusNumber
+) => {
   const counts = aggregateMatchCounts(lottoList, winningNumber, bonusNumber);
   printResultLines(counts);
   return calculateTotalWinnings(counts);

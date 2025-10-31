@@ -1,6 +1,6 @@
-import Lotto from "./model/Lotto.js";
+import Lotto from "../model/Lotto.js";
 import { Random } from "@woowacourse/mission-utils";
-import { OutputView } from "./view/OutputView.js";
+import { OutputView } from "../view/OutputView.js";
 
 export const Repeat = (count) => {
   const outputView = new OutputView();
