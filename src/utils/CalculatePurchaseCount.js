@@ -1,4 +1,4 @@
 export const CalculatePurchaseCount = (amount) => {
-  const count = Number(amount) / 1000;
+  const count = Math.floor(Number(amount) / 1000);
   return count;
 };
