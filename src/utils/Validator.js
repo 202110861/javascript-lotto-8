@@ -26,6 +26,11 @@ export const validateWinningNumbers = (winningNumbers) => {
     );
   } else {
     const winningNumbersArray = winningNumbers.split(",");
+    if (winningNumbersArray.length !== 6) {
+      outputView.printErrorMessage(
+        ERROR_MESSAGES.WINNING_NUMBERS.INVALID_LENGTH
+      );
+    }
     winningNumbersArray.forEach((n) => {
       const number = Number(n);
       if (isNaN(number)) {
