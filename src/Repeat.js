@@ -1,4 +1,4 @@
-import Lotto from "./Lotto.js";
+import Lotto from "./model/Lotto.js";
 import { Random } from "@woowacourse/mission-utils";
 import { OutputView } from "./view/OutputView.js";
 
