@@ -1,4 +1,4 @@
-import { MatchingNumberCount } from "./MatchingNumberCount.js";
+import { MatchingNumberCount } from "./utils/MatchingNumberCount.js";
 import { OutputView } from "./view/OutputView.js";
 import { OUTPUT_MESSAGE } from "./constant/Constants.js";
 

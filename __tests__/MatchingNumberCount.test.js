@@ -1,4 +1,4 @@
-import { MatchingNumberCount } from "../src/MatchingNumberCount.js";
+import { MatchingNumberCount } from "../src/utils/MatchingNumberCount.js";
 
 describe("MatchingNumberCount 테스트", () => {
   test("3개 일치하는 로또 개수를 출력한다.", () => {
