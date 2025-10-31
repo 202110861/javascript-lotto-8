@@ -7,7 +7,7 @@ const getLogSpy = () => {
   return logSpy;
 };
 
-describe("CalculateResultCount 테스트", () => {
+describe("LottoResultController 테스트", () => {
   test("등수별 개수를 집계하여 총 당청금을 계산한다.", () => {
     const lottoList = [
       "[8, 21, 23, 41, 42, 43]",
