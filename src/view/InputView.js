@@ -1,9 +1,9 @@
 import { Console } from "@woowacourse/mission-utils";
-import { INPUT_MESSAGE } from "../Constants.js";
+import { INPUT_MESSAGE } from "../constant/Constants.js";
 import {
   validatePurchaseAmount,
   validateWinningNumbers,
-} from "../Validator.js";
+} from "../utils/Validator.js";
 
 export class InputView {
   async inputPurchase() {

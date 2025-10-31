@@ -1,6 +1,6 @@
 import { MatchingNumberCount } from "./MatchingNumberCount.js";
 import { OutputView } from "./view/OutputView.js";
-import { OUTPUT_MESSAGE } from "./Constants.js";
+import { OUTPUT_MESSAGE } from "./constant/Constants.js";
 
 export const CalculateResultCount = (lottoList, winningNumber, bonusNumber) => {
   const counts = aggregateMatchCounts(lottoList, winningNumber, bonusNumber);

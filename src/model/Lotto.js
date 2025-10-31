@@ -1,6 +1,6 @@
-import { ERROR_MESSAGES } from "../Constants.js";
+import { ERROR_MESSAGES } from "../constant/Constants.js";
 import { OutputView } from "../view/OutputView.js";
-import { isDuplicate } from "../isDuplicate.js";
+import { isDuplicate } from "../utils/isDuplicate.js";
 
 const outputView = new OutputView();
 
